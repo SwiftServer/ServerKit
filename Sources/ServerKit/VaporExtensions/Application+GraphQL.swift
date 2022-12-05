@@ -36,7 +36,7 @@ extension Application.GraphQL {
         nonmutating set { application.storage[ConfigurationKey.self] = newValue }
     }
 
-    public func configureHTTPServer() {
+    public func configureApplication() {
         application.on(.POST, configuration.path, use: runGraphQLOperation)
         application.on(.GET, configuration.playgroundPath) { request in
             Response(status: .ok,

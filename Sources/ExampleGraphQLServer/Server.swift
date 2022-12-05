@@ -29,7 +29,7 @@ struct Server {
             }
         }
 
-        application.graphql.configureHTTPServer()
+        application.graphql.configureApplication()
         application.graphql.server.configuration.address = .hostname("0.0.0.0", port: 9001)
     }
 }
