@@ -18,4 +18,4 @@ jobs:
         restore-keys: |
           spm
     - name: Run Tests
-      run: swift test
+      run: swift test --package-path=./
