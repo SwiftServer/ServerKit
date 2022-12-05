@@ -30,7 +30,10 @@ package.targets = [
     // Examples
     .executableTarget(name: "ExampleGRPCServer", dependencies: [
         .target(name: "ServerKit"),
-    ])
+    ]),
+    .executableTarget(name: "ExampleGraphQLServer", dependencies: [
+        .target(name: "ServerKit"),
+    ]),
 ]
 
 package.products = [
@@ -38,4 +41,5 @@ package.products = [
 
     // Examples
     .executable(name: "ExampleGRPCServer", targets: ["ExampleGRPCServer"]),
+    .executable(name: "ExampleGraphQLServer", targets: ["ExampleGraphQLServer"]),
 ]
