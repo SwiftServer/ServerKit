@@ -8,12 +8,18 @@ package.platforms = [
 ]
 
 package.dependencies = [
+    .package(url: "https://github.com/GraphQLSwift/GraphQL", from: "2.0.0"),
+    .package(url: "https://github.com/GraphQLSwift/DataLoader", from: "2.0.0"),
+    .package(url: "https://github.com/GraphQLSwift/Graphiti", from: "1.0.0"),
     .package(url: "https://github.com/grpc/grpc-swift", from: "1.0.0"),
     .package(url: "https://github.com/vapor/vapor", from: "4.0.0"),
 ]
 
 package.targets = [
     .target(name: "ServerKit", dependencies: [
+        .product(name: "GraphQL", package: "GraphQL"),
+        .product(name: "DataLoader", package: "DataLoader"),
+        .product(name: "Graphiti", package: "Graphiti"),
         .product(name: "GRPC", package: "grpc-swift"),
         .product(name: "Vapor", package: "vapor"),
     ]),
